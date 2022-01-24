@@ -1,7 +1,11 @@
-type TupleToObject<Type extends readonly (string | symbol | number)[]> = {
+type TupleToObject<Type extends readonly (string | number | symbol)[]> = {
     // T -> "tesla" | "model 3" | "model X" | "model Y"
   [P in Type[number]]: P
 }
+
+// extends => 类型约束
+// Type extends readonly (string | number | symbol)[]
+//  => Type 只能是 readonly string[] | readonly number[] | readonly symbol[]
 
 // JS
 function tupleToObject(arr: []) {

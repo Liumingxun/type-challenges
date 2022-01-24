@@ -31,6 +31,7 @@ type cases = [
 
 type w = typeof tuple
 
+// 断言
 // @ts-expect-error
 type error = TupleToObject<[[1, 2], {}]>
 
