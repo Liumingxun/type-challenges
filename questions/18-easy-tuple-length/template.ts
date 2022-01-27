@@ -7,3 +7,6 @@ type TT =typeof tesla
 type T = Length<typeof tesla>
 
 let wwa: T;
+wwa = 4
+// @ts-expect-error
+wwa = 3
